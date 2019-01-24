@@ -11,6 +11,8 @@ var handlebars = require('express3-handlebars')
 var hello = require('./routes/hello');
 
 var app = express();
+var hello = require('./routes/hello');
+app.get('hello/:username', hello.view);
 
 // all environments
 app.set('port', process.env.PORT || 3000);
